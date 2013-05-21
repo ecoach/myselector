@@ -1,13 +1,8 @@
-{% extends 'myselector/new_base.html' %}
+{% extends 'new_base.html' %}
 
 
 {% block head_extra %}
-    <link rel="stylesheet" type="text/css" href="/static/myselector/widgets/css/news_widget.css?{% now "U" %}" media="all" />
-    <script src="/static/myselector/widgets/js/news_widget.js?{% now "U" %}"></script>
-
     <!--
-    <link rel="stylesheet" type="text/css" href="/static/working.css" media="all" />
-    <script src="/static/working.js"></script>
     -->
 {% endblock %}
 
@@ -18,11 +13,6 @@
 <table border='0' style='border-collapse:collapse;' id='content_table'>
     <tr>
         <td style='padding: 10px 20px 10px 20px;'>
-
-<!-- course picking and widget table -->
-<table width='100%' border='0'>
-    <tr>
-        <td width='70%'>
 
 <!-- Course picking table -->
 <table width='100%' border='0'>
@@ -35,7 +25,7 @@
 <table width='100%' border='0' id='courses_table'>
     <tr>
         <td align='center' valign='center'>
-        <img src="/static/myselector/fall/images/physics4.png">
+        <img src="/static/myselector/images/physics4.png">
         </td>
         <td class='course_text' valign='center'>
             <nobr>Winter Term 2013</nobr><br>
@@ -47,12 +37,12 @@
         </td>
         <td valign='center' align='right'>
             &nbsp; 
-            <a href ="/w13physics/"><img src="/static/myselector/fall/images/museum.png"/></a>
+            <a href ="/w13physics/"><img src="/static/myselector/images/museum.png"/></a>
         </td>
     </tr>
     <tr>
         <td align='center' valign='center'>
-        <img src="/static/myselector/fall/images/physics2.png">
+        <img src="/static/myselector/images/physics2.png">
         </td>
         <td class='course_text' valign='center'>
             <nobr>Fall Term 2012</nobr><br>
@@ -64,12 +54,12 @@
         </td>
         <td valign='center' align='right'>
             &nbsp; 
-            <a href ="/f12physics/"><img src="/static/myselector/fall/images/museum.png"/></a>
+            <a href ="/f12physics/"><img src="/static/myselector/images/museum.png"/></a>
         </td>
     </tr>
     <tr>
         <td align='center' valign='center'>
-        <img src="/static/myselector/fall/images/physics1.jpg">
+        <img src="/static/myselector/images/physics1.jpg">
         </td>
         <td class='course_text' valign='center'>
             <nobr>Spring Term 2012</nobr><br>
@@ -80,12 +70,12 @@
             <nobr><font color='red'>RETIRED <br> (But explore the messages) </font></nobr><br>
         </td>
         <td valign='center' align='right'>
-        <a href ="/s12physics/"><img src="/static/myselector/fall/images/museum.png"/></a>
+        <a href ="/s12physics/"><img src="/static/myselector/images/museum.png"/></a>
         </td>
     </tr>
     <tr>
         <td align='center' valign='center'>
-        <img src="/static/myselector/fall/images/physics3.png">
+        <img src="/static/myselector/images/physics3.png">
         </td>
         <td class='course_text' valign='center'>
             <nobr>Winter Term 2012</nobr><br>
@@ -96,7 +86,7 @@
             <nobr><font color='red'>RETIRED <br> (But explore the messages) </font></nobr><br>
         </td>
         <td valign='center' align='right'>
-        <a href ="/w12physics/"><img src="/static/myselector/fall/images/museum.png"/></a>
+        <a href ="/w12physics/"><img src="/static/myselector/images/museum.png"/></a>
         </td>
     </tr>
 </table>
@@ -105,79 +95,6 @@
     </td></tr>
 </table>
 <!-- Course picking table -->
-
-        </td>
-        <td valign='top' align='center'>
-
-<!-- Widgets table -->
-<table border='0'>
-    <tr><td>
-
-<!-- RIGHT PANEL -->
-<div id="right">
-    <h2>Just for fun:</h2>
-
-        <!--- NAVIGATION BUTTONS -->
-        <div class="sliderbuttons">
-            <a href="javascript:void(0)" onclick="PreviousSlide()" id="PreviousButton" style="margin-right: 10px;">
-                <p1>&lt;&lt; Go Back</p1></a><a href="javascript:void(0)" onclick="NextSlide()" id="NextButton"><p1>Show Me More! &gt;&gt;</p1></a>
-        </div>
-        <!--- NAVIGATION BUTTONS -->
-
-        <!--- DISPLAY CONTAINER -->
-        <div id="container">
-
-            <!-- OUTTER WRAPPER -->
-            <div id="slider-wrapper">
-
-                <!-- SLIDE 1 -->
-                <div id="slide1" class="slide">
-             
-                    <p><img src="/static/myselector/widgets/images/feed-icon-small.png">    Popular Science</p>
-                    <script language="JavaScript" src="/static/myselector/widgets/rss/popular_science_rss.js?{% now "U" %}" type="text/javascript"></script>
-
-                </div>
-                <!-- SLIDE 1 -->
-
-                <!-- SLIDE 2 -->
-                <div id="slide2" class="slide">
-    
-                    <p><img src="/static/myselector/widgets/images/feed-icon-small.png">   Scientific American: </p>
-                    <script language="JavaScript" src="/static/myselector/widgets/rss/scientific_american_rss.js?{% now "U" %}" type="text/javascript"></script>
-
-                </div>
-                <!-- SLIDE 2 -->
-              
-                <!-- SLIDE 3 -->
-                <div id="slide3" class="slide">
-
-                    <p><img src="/static/myselector/widgets/images/feed-icon-small.png">   New York Times Science: </p>
-                    <script language="JavaScript" src="/static/myselector/widgets/rss/new_york_times_rss.js?{% now "U" %}" type="text/javascript"></script>
-
-                </div>
-                <!-- SLIDE 3 -->
-    
-            </div>
-            <!-- OUTTER WRAPPER -->
-
-        </div>
-        <!--- DISPLAY CONTAINER -->
-
-</div>
-<!-- RIGHT PANEL -->
-
-
-
-    </td></tr>
-</table>
-<!-- Widgets table -->
-
-        </td>
-    </tr>
-</table>
-<!-- Course picking and widget table -->
-
-
 
         </td>
     </tr>
