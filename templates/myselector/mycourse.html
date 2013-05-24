@@ -2,103 +2,92 @@
 
 
 {% block head_extra %}
-    <!--
-    -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#courses-table tr").click(function(e) {
+                e.stopPropagation();
+                window.location = $(this).find("td.button a.btn").attr("href");
+            })
+        });
+    </script>
 {% endblock %}
+
+{% block title %} - My Courses{% endblock %}
 
 
 {% block content %}
-
-<!-- Central content table -->
-<table border='0' style='border-collapse:collapse;' id='content_table'>
-    <tr>
-        <td style='padding: 10px 20px 10px 20px;'>
-
-<!-- Course picking table -->
-<table width='100%' border='0'>
-    <tr><td id='pick_header'>
-        <h2>Explore our coached courses!</h2>
-    </td></tr>
-    <tr><td>
+<div id="content-col" class="span9 courses-content">
+<h2>Explore our coached courses!</h2>
 
 <!-- Course table -->
-<table width='100%' border='0' id='courses_table'>
+<table id='courses-table' class="table table-hover">
     <tr>
-        <td align='center' valign='center'>
-        <img src="/static/myselector/images/physics4.png">
+        <td class="thumb">
+            <img class="thumbnail" src="/static/myselector/images/physics4-crop.png">
         </td>
-        <td class='course_text' valign='center'>
-            <nobr>Winter Term 2013</nobr><br>
-            <nobr>University of Michigan</nobr><br>
-            <nobr>Physics 135, 235, 140, 240</nobr>
+        <td class='course-text'>
+            <nobr>Winter Term 2013</nobr><br/>
+            <nobr>University of Michigan</nobr><br/>
+            <nobr>Physics 135, 235, 140, 240</nobr><br/>    
+            <span class="label label-warning">RETIRED</span>
         </td>
-        <td valign='center' align='center' class='note'>
-            <nobr><font color='red'>RETIRED <br> (But explore the messages) </font></nobr><br>
-        </td>
-        <td valign='center' align='right'>
-            &nbsp; 
-            <a href ="/w13physics/"><img src="/static/myselector/images/museum.png"/></a>
+        <td class="button"> 
+            <a class="btn btn-large" href ="/w13physics/">Enter Archive</a>
         </td>
     </tr>
     <tr>
-        <td align='center' valign='center'>
-        <img src="/static/myselector/images/physics2.png">
+        <td class="thumb">
+            <img class="thumbnail" src="/static/myselector/images/physics2-crop.png">
         </td>
-        <td class='course_text' valign='center'>
-            <nobr>Fall Term 2012</nobr><br>
-            <nobr>University of Michigan</nobr><br>
-            <nobr>Physics 135, 235, 140, 240</nobr>
+        <td class='course-text'>
+            <nobr>Fall Term 2012</nobr><br/>
+            <nobr>University of Michigan</nobr><br/>
+            <nobr>Physics 135, 235, 140, 240</nobr><br/>
+            <span class="label label-warning">RETIRED</span>
         </td>
-        <td valign='center' align='center' class='note'>
-            <nobr><font color='red'>RETIRED <br> (But explore the messages) </font></nobr><br>
-        </td>
-        <td valign='center' align='right'>
-            &nbsp; 
-            <a href ="/f12physics/"><img src="/static/myselector/images/museum.png"/></a>
+        <td class="button">
+            <a class="btn btn-large" href ="/f12physics/">Enter Archive</a>
         </td>
     </tr>
     <tr>
-        <td align='center' valign='center'>
-        <img src="/static/myselector/images/physics1.jpg">
+        <td class="thumb">
+            <img class="thumbnail" src="/static/myselector/images/physics1-crop.jpg">
         </td>
-        <td class='course_text' valign='center'>
-            <nobr>Spring Term 2012</nobr><br>
-            <nobr>University of Michigan</nobr><br>
-            <nobr>Physics 135, 235, 140, 240</nobr>
+        <td class='course-text'>
+            <nobr>Spring Term 2012</nobr><br/>
+            <nobr>University of Michigan</nobr><br/>
+            <nobr>Physics 135, 235, 140, 240</nobr><br/>
+            <span class="label label-warning">RETIRED</span>
         </td>
-        <td valign='center' align='center' class='note'>
-            <nobr><font color='red'>RETIRED <br> (But explore the messages) </font></nobr><br>
-        </td>
-        <td valign='center' align='right'>
-        <a href ="/s12physics/"><img src="/static/myselector/images/museum.png"/></a>
+        <td class="button">
+            <a class="btn btn-large" href ="/s12physics/">Enter Archive</a>
         </td>
     </tr>
     <tr>
-        <td align='center' valign='center'>
-        <img src="/static/myselector/images/physics3.png">
+        <td class="thumb">
+            <img class="thumbnail" src="/static/myselector/images/physics3-crop.png">
         </td>
-        <td class='course_text' valign='center'>
-            <nobr>Winter Term 2012</nobr><br>
-            <nobr>University of Michigan</nobr><br>
-            <nobr>Physics 135, 235, 140, 240</nobr>
+        <td class='course-text'>
+            <nobr>Winter Term 2012</nobr><br/   >
+            <nobr>University of Michigan</nobr><br/>
+            <nobr>Physics 135, 235, 140, 240</nobr><br/>
+            <span class="label label-warning">RETIRED</span>
         </td>
-        <td valign='center' align='center' class='note'>
-            <nobr><font color='red'>RETIRED <br> (But explore the messages) </font></nobr><br>
-        </td>
-        <td valign='center' align='right'>
-        <a href ="/w12physics/"><img src="/static/myselector/images/museum.png"/></a>
+        <td class="button">
+             <a class="btn btn-large" href ="/w12physics/">Enter Archive</a>
         </td>
     </tr>
 </table>
 <!-- Course table -->
+</div>
 
-    </td></tr>
-</table>
-<!-- Course picking table -->
-
-        </td>
-    </tr>
-</table>
-<!-- Central content table -->
-
+<div id="courses-info" class="span3">
+    <div class="well">[PLACEHOLDER]<br/>
+        <h5><i>E2Coach helps you succeed in your physics course by providing:</i></h5>
+        <ul>
+            <li>Expert advice</li>
+            <li>Advice from students like you</li>
+            <li>Stats from your class </li>
+        </ul>
+    </div>
 {% endblock %}
