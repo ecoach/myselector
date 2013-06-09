@@ -1,31 +1,31 @@
 from django.conf.urls.defaults import patterns, include, url
-
-from myselector.views import *
+from .views import *
 from django.contrib.auth.decorators import login_required
 
-from django.views.generic.simple import redirect_to
+#from mydata4 import urls
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Uncomment the next line to enable the admin:
+    # admin
     url(r'^admin/', include(admin.site.urls)),
 
     # login / logout
-    url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'myselector/login.html'}),
-    url(r'^logout', 'myselector.views.mylogout'),
+    #url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
+    url(r'^login/$', 'django.contrib.auth.views.login'),
+    url(r'^logout', 'mylogout'),
 
-    # menu items
-    url(r'^about/$', About_View.as_view(), name='about'),
-    url(r'^tailoring/$', Tailoring_View.as_view(), name='tailoring'),
-    url(r'^team/$', Team_View.as_view(), name='team'),
-    url(r'^press/$', Press_View.as_view(), name='press'),
-    url(r'^contact/$', Contact_View.as_view(), name='contact'),
+    # coaches
+    #url(r'^mts0/$', login_required(mydata0.urls)),
+    #url(r'^mts1/$', login_required(mydata1.urls)),
+    #url(r'^mts2/$', login_required(mydata2.urls)),
+    #url(r'^mts3/$', login_required(mydata3.urls)),
+    #url(r'^mts4/$', login_required(mydata4.urls)),
+    #url(r'^mts5/$', login_required(mydata5.urls)),
 
     # main
-    url(r'^rss_data.log/$', login_required(RSS_View), name='data_log'),
     url(r'^', login_required(CourseSelector_View.as_view()), name='none'),
 )
 
