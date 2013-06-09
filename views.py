@@ -11,7 +11,7 @@ def test1(request, **kwargs):
 def course_select_view(request, **kwargs):
     
     return render(request, 'myselector/mycourse.html', {
-        "main_nav": main_nav(request.user, 'courses')
+        "main_nav": main_nav(request.user, 'coaches')
     })
 
 def mylogout(request):
