@@ -5,6 +5,8 @@ django.template.add_to_builtins('django.templatetags.future')
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+# globals
+
 #from os.path import abspath, dirname, join
 #SETTINGS_PATH = abspath(dirname(__file__))
 #SOME_SUB_PATH = abspath(join(SETTINGS_PATH, '../'))
