@@ -2,14 +2,6 @@
 
 
 {% block head_extra %}
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#courses-table tr").click(function(e) {
-                e.stopPropagation();
-                window.location = $(this).find("td.button a.btn").attr("href");
-            })
-        });
-    </script>
 {% endblock %}
 
 {% block title %}My Courses - {% endblock %}
@@ -20,83 +12,119 @@
 <h2>Explore our coached courses!</h2>
 
 <!-- Course table -->
-<table id='courses-table' class="table table-hover">
+<table id="courses-table" class="table table-hover table-clickable-row">
     <tr>
         <td class="thumb">
-            <img class="thumbnail" src="/static/myselector/images/bigsandbox.jpeg">
+            <a href="/mts4/">
+                <img class="thumbnail" src="/static/myselector/images/bigsandbox.jpeg"/>
+            </a>
         </td>
-        <td class='course-text'>
-            <nobr>Summer 2013</nobr><br/>
-            <nobr>New Sandbox project (mts4)</nobr><br/>    
-            <span class="label label-success">ACTIVE</span>
+        <td class="course-text">
+            <a href="/mts4/">
+                <nobr>Summer 2013</nobr><br/>
+                <nobr>New Sandbox project (mts4)</nobr><br/>    
+                <span class="label label-success">ACTIVE</span>
+            </a>
         </td>
         <td class="button"> 
-            <a class="btn btn-large" href ="/mts4/">Enter Project</a>
+            <a href="/mts4/">
+                <button class="btn btn-large">Enter Project</button>
+            </a>
         </td>
     </tr>
     <tr>
         <td class="thumb">
-            <img class="thumbnail" src="/static/myselector/images/sandbox.jpeg">
+            <a href="/mts5/">
+                <img class="thumbnail" src="/static/myselector/images/sandbox.jpeg"/>
+            </a>
         </td>
-        <td class='course-text'>
-            <nobr>Spring 2013</nobr><br/>
-            <nobr>Old Sandbox project (mts5)</nobr><br/>    
-            <span class="label label-success">ACTIVE</span>
+        <td class="course-text">
+            <a href="/mts5/">
+                <nobr>Spring 2013</nobr><br/>
+                <nobr>Old Sandbox project (mts5)</nobr><br/>    
+                <span class="label label-success">ACTIVE</span>
+            </a>
         </td>
         <td class="button"> 
-            <a class="btn btn-large" href ="/mts5/">Enter Project</a>
+            <a href="/mts5/">
+                <button class="btn btn-large">Enter Project</button>
+            </a>
         </td>
     </tr>
     <tr>
         <td class="thumb">
-            <img class="thumbnail" src="/static/myselector/images/physics4-crop.png">
+            <a href="/w13physics/">
+                <img class="thumbnail" src="/static/myselector/images/physics4-crop.png"/>
+            </a>
         </td>
-        <td class='course-text'>
-            <nobr>Winter Term 2013</nobr><br/>
-            <nobr>Physics 135, 235, 140, 240</nobr><br/>    
-            <span class="label label-warning">RETIRED</span>
-        </td>
-        <td class="button"> 
-            <a class="btn btn-large" href ="/w13physics/">Enter Archive</a>
-        </td>
-    </tr>
-    <tr>
-        <td class="thumb">
-            <img class="thumbnail" src="/static/myselector/images/physics2-crop.png">
-        </td>
-        <td class='course-text'>
-            <nobr>Fall Term 2012</nobr><br/>
-            <nobr>Physics 135, 235, 140, 240</nobr><br/>
-            <span class="label label-warning">RETIRED</span>
+        <td class="course-text">
+            <a href="/w13physics/">
+                <nobr>Winter Term 2013</nobr><br/>
+                <nobr>Physics 135, 235, 140, 240</nobr><br/>    
+                <span class="label label-warning">RETIRED</span>
+            </a>
         </td>
         <td class="button">
-            <a class="btn btn-large" href ="/f12physics/">Enter Archive</a>
+            <a href="/w13physics/">
+                <button class="btn btn-large">Enter Archive</button>
+            </a>
         </td>
     </tr>
     <tr>
         <td class="thumb">
-            <img class="thumbnail" src="/static/myselector/images/physics1-crop.jpg">
+            <a href="/f12physics/">
+                <img class="thumbnail" src="/static/myselector/images/physics2-crop.png"/>
+            </a>
         </td>
-        <td class='course-text'>
-            <nobr>Spring Term 2012</nobr><br/>
-            <nobr>Physics 135, 235, 140, 240</nobr><br/>
-            <span class="label label-warning">RETIRED</span>
+        <td class="course-text">
+            <a href="/f12physics/">
+                <nobr>Fall Term 2012</nobr><br/>
+                <nobr>Physics 135, 235, 140, 240</nobr><br/>
+                <span class="label label-warning">RETIRED</span>
+            </a>
         </td>
         <td class="button">
-            <a class="btn btn-large" href ="/s12physics/">Enter Archive</a>
+            <a href="/f12physics/">
+                <button class="btn btn-large">Enter Archive</button>
+            </a>
         </td>
     </tr>
     <tr>
         <td class="thumb">
-            <img class="thumbnail" src="/static/myselector/images/physics3-crop.png">
+            <a href="/s12physics/">
+                <img class="thumbnail" src="/static/myselector/images/physics1-crop.jpg"/>
+            </a>
         </td>
-        <td class='course-text'>
-            <nobr>Winter Term 2012</nobr><br/   >
-            <nobr>Physics 135, 235, 140, 240</nobr><br/>
-            <span class="label label-warning">RETIRED</span>
+        <td class="course-text">
+            <a href="/s12physics/">
+                <nobr>Spring Term 2012</nobr><br/>
+                <nobr>Physics 135, 235, 140, 240</nobr><br/>
+                <span class="label label-warning">RETIRED</span>
+            </a>
         </td>
         <td class="button">
-             <a class="btn btn-large" href ="/w12physics/">Enter Archive</a>
+            <a href="/s12physics/">
+                <button class="btn btn-large">Enter Archive</button>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td class="thumb">
+            <a href="/w12physics/">
+                <img class="thumbnail" src="/static/myselector/images/physics3-crop.png"/>
+            </a>
+        </td>
+        <td class="course-text">
+            <a href="/w12physics/">
+                <nobr>Winter Term 2012</nobr><br/>
+                <nobr>Physics 135, 235, 140, 240</nobr><br/>
+                <span class="label label-warning">RETIRED</span>
+            </a>
+        </td>
+        <td class="button">
+            <a href="/w12physics/">
+                <button class="btn btn-large">Enter Archive</button>
+            </a>
         </td>
     </tr>
 </table>
