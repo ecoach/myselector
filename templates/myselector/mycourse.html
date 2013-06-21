@@ -2,6 +2,19 @@
 
 
 {% block head_extra %}
+<script type="text/javascript"> 
+    $(document).ready(function() {
+        $(".btn-show").click(function() {
+            $(this).hide();
+            $(".btn-hide").show();
+        });
+        $(".btn-hide").click(function() {
+            $(this).hide();
+            $(".btn-show").show();
+        })
+    });
+</script>
+
 {% endblock %}
 
 {% block title %}My Courses - {% endblock %}
@@ -12,7 +25,8 @@
 <h2>Explore our coached courses!</h2>
 
 <!-- Course table -->
-<table id="courses-table" class="table table-hover table-clickable-row">
+<table id="current-courses-table" class="table table-hover table-clickable-row courses-table">
+    <tbody>
     <tr>
         <td class="thumb">
             <a href="/mts4/">
@@ -51,6 +65,14 @@
             </a>
         </td>
     </tr>
+    </tbody>
+</table>
+<!-- Course table -->
+
+<!-- Archive table -->
+<div id="archived-table-container" class="collapse">
+<table id="archived-table" class="table table-hover table-clickable-row courses-table">
+    <tbody>
     <tr>
         <td class="thumb">
             <a href="/w13physics/">
@@ -127,8 +149,17 @@
             </a>
         </td>
     </tr>
+    </tbody>
 </table>
-<!-- Course table -->
+</div>
+
+<div id="archived-button-container">
+    <button class="btn btn-show btn-link" data-target="#archived-table-container" data-toggle="collapse">
+    View Archived Courses&hellip;</button>
+    <button class="btn btn-hide btn-link" data-target="#archived-table-container" data-toggle="collapse">
+    Hide Archived Courses&hellip;</button>
+</div>
+<!-- Archive table -->
 </div>
 
 <div id="courses-info" class="span3">
