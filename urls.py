@@ -12,7 +12,7 @@ urlpatterns = patterns('',
 
     # login / logout
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
-    url(r'^logout', 'mylogout'),
+    url(r'^logout', mylogout_view, name='mylogout'),
 
     # coaches
     #url(r'^mts0/$', login_required(mydata0.urls)),

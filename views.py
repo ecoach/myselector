@@ -14,7 +14,7 @@ def course_select_view(request, **kwargs):
         "main_nav": main_nav(request.user, 'coaches')
     })
 
-def mylogout(request):
+def mylogout_view(request):
     return HttpResponseRedirect("https://weblogin.umich.edu/cgi-bin/logout")
 
 def mylogin(request, **kwargs):
