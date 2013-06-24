@@ -14,6 +14,11 @@ urlpatterns = patterns('',
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
     url(r'^logout', mylogout_view, name='mylogout'),
 
+    # public pages
+    url(r'^about/', about_view, name='about'),
+    url(r'^team/', team_view, name='team'),
+    url(r'^press/', press_view, name='press'),
+
     # coaches
     #url(r'^mts0/$', login_required(mydata0.urls)),
     #url(r'^mts1/$', login_required(mydata1.urls)),

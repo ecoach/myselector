@@ -14,6 +14,24 @@ def course_select_view(request, **kwargs):
         "main_nav": main_nav(request.user, 'coaches')
     })
 
+def about_view(request, **kwargs):
+    
+    return render(request, 'myselector/about.html', {
+        "main_nav": main_nav(request.user, 'static_linkback')
+    })
+
+def team_view(request, **kwargs):
+    
+    return render(request, 'myselector/team.html', {
+        "main_nav": main_nav(request.user, 'static_linkback')
+    })
+
+def press_view(request, **kwargs):
+    
+    return render(request, 'myselector/press.html', {
+        "main_nav": main_nav(request.user, 'static_linkback')
+    })
+
 def mylogout_view(request):
     return HttpResponseRedirect("https://weblogin.umich.edu/cgi-bin/logout")
 
