@@ -5,6 +5,12 @@ from mynav.nav import main_nav
 #from myselector.nav_info import NavInfo
 #from myselector.models import RSSLog, ELog
 
+def mylogout_view(request):
+    return HttpResponseRedirect("https://weblogin.umich.edu/cgi-bin/logout")
+
+def mylogin(request, **kwargs):
+    return render_to_response('django.contrib.auth.views.login')
+
 def test1(request, **kwargs):
     return HttpResponse("You're looking at the selector test page")
 
@@ -31,11 +37,5 @@ def press_view(request, **kwargs):
     return render(request, 'myselector/press.html', {
         "main_nav": main_nav(request.user, 'static_linkback')
     })
-
-def mylogout_view(request):
-    return HttpResponseRedirect("https://weblogin.umich.edu/cgi-bin/logout")
-
-def mylogin(request, **kwargs):
-    return render_to_response('django.contrib.auth.views.login')
 
 
