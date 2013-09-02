@@ -3,7 +3,7 @@ host = socket.gethostname()
 
 if host == "ecoach2.lsa.umich.edu":
     HOST = "DEVELOPMENT"
-elif host == "ecoach.lsa.umich.edu":
+elif host == "ecoach3.lsa.umich.edu":
     HOST = "PRODUCTION"
 else:
     HOST = "LOCAL"
@@ -16,11 +16,11 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # globals
-DB_NAME     = 'ecoach4'
-DPROJ_NAME  = 'mydata4'
-MPROJ_NAME  = 'mts4'
+DB_NAME     = 'ecoach6'
+DPROJ_NAME  = 'mydata6'
+MPROJ_NAME  = 'mts6'
 COACH_NAME = 'Coach Selector'
-COACH_URL = 'coach4'
+COACH_URL = 'coach6'
 COACH_EMAIL = 'ecoach-help@umich.edu'
 
 from os.path import abspath, dirname, join
@@ -35,7 +35,7 @@ DOMAIN = 'localhost'
 DOMAIN_COACH = '/' + COACH_URL + '/'
 URL_SUB = MPROJ_NAME + '/'
 
-MYDATA = 'mydata4'
+MYDATA = 'mydata6'
 
 DATABASE_ROUTERS = ['mycoach.routers.CommonRouter']
 
