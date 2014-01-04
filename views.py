@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response, render
 from django.views.generic import TemplateView
-from mynav.nav import main_nav
+from mynav.selector_nav import *
 #from myselector.nav_info import NavInfo
 #from myselector.models import RSSLog, ELog
 
@@ -17,25 +17,25 @@ def test1(request, **kwargs):
 def course_select_view(request, **kwargs):
     
     return render(request, 'myselector/mycourse.html', {
-        "main_nav": main_nav(request.user, 'coaches')
+        "main_nav": selector_main_nav(request.user, 'coaches')
     })
 
 def about_view(request, **kwargs):
     
     return render(request, 'myselector/about.html', {
-        "main_nav": main_nav(request.user, 'static_linkback')
+        "main_nav": selector_main_nav(request.user, 'static_linkback')
     })
 
 def team_view(request, **kwargs):
     
     return render(request, 'myselector/team.html', {
-        "main_nav": main_nav(request.user, 'static_linkback')
+        "main_nav": selector_main_nav(request.user, 'static_linkback')
     })
 
 def press_view(request, **kwargs):
     
     return render(request, 'myselector/press.html', {
-        "main_nav": main_nav(request.user, 'static_linkback')
+        "main_nav": selector_main_nav(request.user, 'static_linkback')
     })
 
 
