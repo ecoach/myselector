@@ -18,8 +18,6 @@ mts_patterns = patterns('',
     url(r'^export/',        include('myexporter.urls', namespace='myexporter')),
     url(r'^nts/',           include('nts.urls', namespace='nts')),
     url(r'^emailer/',       include('myemailer.urls', namespace='myemailer')),
-    #url(r'^copycat/',       include('mycopycat.urls', namespace='mycopycat')),
-    #url(r'^curator/',       include('mycurator.urls', namespace='mycurator')),
     url(r'^usage/',         include('myusage.urls', namespace='myusage')),
     url(r'^logger/',        include('mylogger.urls', namespace='mylogger')),
 

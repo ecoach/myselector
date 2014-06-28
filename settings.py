@@ -16,11 +16,11 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # globals
-DB_NAME     = 'ecoach4'
-DPROJ_NAME  = 'mydata4'
-MPROJ_NAME  = 'mts4'
+DB_NAME     = 'ecoach19'
+DPROJ_NAME  = 'mydata19'
+MPROJ_NAME  = 'mts/mts19'
 COACH_NAME = 'Coach Selector'
-COACH_URL = 'coach4'
+COACH_URL = 'coach19'
 COACH_EMAIL = 'ecoach-help@umich.edu'
 
 from os.path import abspath, dirname, join
@@ -35,9 +35,9 @@ DOMAIN = 'localhost'
 DOMAIN_COACH = '/' + COACH_URL + '/'
 URL_SUB = MPROJ_NAME + '/'
 
-MYDATA = 'mydata4'
+MYDATA = 'mydata19'
 
-DATABASE_ROUTERS = ['mycoach.routers.CommonRouter']
+DATABASE_ROUTERS = ['mytailoring.routers.CommonRouter']
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -117,7 +117,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    DIR_PROJ + '/' + DPROJ_NAME + '/' + MPROJ_NAME + '/Static',
+    DIR_PROJ +  MPROJ_NAME + '/Static',
     DIR_PROJ + 'static',
 )
 
@@ -231,7 +231,7 @@ LOGIN_URL = '/coaches/login/'
 
 LOGIN_REDIRECT_URL = '/coaches/'
 
-TAILORING2_PROJECT_ROOT = DIR_PROJ + DPROJ_NAME + '/' + MPROJ_NAME + '/'
+TAILORING2_PROJECT_ROOT = DIR_PROJ + MPROJ_NAME + '/'
 
 #TAILORING2_PROJECT_CONFIG = DIR_PROJ + "tailoring2/config.py"
 #or
