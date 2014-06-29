@@ -26,6 +26,15 @@
 <!-- Course table -->
 <table id="current-courses-table" class="table table-hover table-clickable-row courses-table">
     <tbody>
+
+    </tbody>
+</table>
+<!-- Course table -->
+
+<!-- Archive table -->
+<div id="archived-table-container" class="in collapse">
+<table id="archived-table" class="table table-hover table-clickable-row courses-table">
+    <tbody>
     <tr>
         <td class="thumb">
             <a href="/coach19/">
@@ -121,52 +130,6 @@
             </a>
         </td>
     </tr>
-    <tr>
-        <td class="thumb">
-            <a href="/coach13/">
-                <img class="thumbnail" src="{{ STATIC_URL }}myselector/images/ssg.png"/>
-            </a>
-        </td>
-        <td class="course-text">
-            <a href="/coach13/">
-                <nobr>Winter 2014</nobr><br/>
-                <nobr>Tournaments - SSG in Physics 135 & 235</nobr><br/>    
-                <span class="label label-success">ACTIVE</span>
-            </a>
-        </td>
-        <td class="button"> 
-            <a href="/coach13/">
-                <button class="btn btn-large">Enter Coach</button>
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td class="thumb">
-            <a href="/coach12/">
-                <img class="thumbnail" src="{{ STATIC_URL }}myselector/images/240.png"/>
-            </a>
-        </td>
-        <td class="course-text">
-            <a href="/coach12/">
-                <nobr>Winter 2014</nobr><br/>
-                <nobr>Tournaments - Physics 240</nobr><br/>    
-                <span class="label label-success">ACTIVE</span>
-            </a>
-        </td>
-        <td class="button"> 
-            <a href="/coach12/">
-                <button class="btn btn-large">Enter Coach</button>
-            </a>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- Course table -->
-
-<!-- Archive table -->
-<div id="archived-table-container" class="collapse">
-<table id="archived-table" class="table table-hover table-clickable-row courses-table">
-    <tbody>
     <tr>
         <td class="thumb">
             <a href="/coach9/">
@@ -324,9 +287,9 @@
 </div>
 
 <div id="archived-button-container">
-    <button class="btn btn-show btn-link" data-target="#archived-table-container" data-toggle="collapse">
-    View Archived Coaches&hellip;</button>
     <button class="btn btn-hide btn-link" data-target="#archived-table-container" data-toggle="collapse">
+    View Archived Coaches&hellip;</button>
+    <button class="btn btn-show btn-link" data-target="#archived-table-container" data-toggle="collapse">
     Hide Archived Coaches&hellip;</button>
 </div>
 <!-- Archive table -->
